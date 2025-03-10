@@ -11,7 +11,7 @@ RUN apk add --no-cache \
     libffi-dev \
     python3-dev \
     libxml2-dev \
-    libxslt-dev \
+    libxslt-dev
 #    && python3 -m ensurepip --upgrade
 #    && pip install --no-cache --upgrade pip setuptools wheel
 #RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
