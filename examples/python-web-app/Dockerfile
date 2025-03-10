@@ -5,7 +5,15 @@ WORKDIR /app
 COPY requirements.txt /app/
 COPY devops /app/
 
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache \
+    gcc \
+    musl-dev \
+    libffi-dev \
+    python3-dev \
+    libxml2-dev \
+    libxslt-dev \
+    && python3 -m ensurepip --upgrade \
+    && pip install --no-cache --upgrade pip setuptools wheel
 #RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
 
 SHELL ["/bin/bash", "-c"]
