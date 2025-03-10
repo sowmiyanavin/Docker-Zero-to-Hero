@@ -6,6 +6,7 @@ COPY requirements.txt /app/
 COPY devops /app/
 
 RUN apk add --no-cache \
+    bash \
     gcc \
     musl-dev \
     libffi-dev \
