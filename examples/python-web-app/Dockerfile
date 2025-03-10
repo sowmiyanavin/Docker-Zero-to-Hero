@@ -1,11 +1,12 @@
-FROM ubuntu
+FROM alpine
 
 WORKDIR /app
 
 COPY requirements.txt /app/
 COPY devops /app/
 
-RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
+RUN apk add --no-cache python3 py3-pip
+#RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
 
 SHELL ["/bin/bash", "-c"]
 
