@@ -6,4 +6,4 @@ COPY app.html /var/www/html
 
 EXPOSE 80
 
-CMD nginx -g daemonoff;
+CMD ["nginx", "-g", "daemon off;"]
